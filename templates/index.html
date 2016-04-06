@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+    <title>Air Quality</title>
+	<style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+</head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <form class="navbar-form navbar-right" role="search" action="javascript:getWeather()">
+                        <div class="form-group">
+                            <input id="city" type="text" class="form-control" placeholder="Enter City" required>
+                        </div>
+                        <button type="submit" class="btn btn-default">Get Forecast</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container" hidden>
+            <div class="jumbotron">
+            </div>
+
+            <div id="forecast" class="row">
+            </div>
+			
+			
+        </div>
+		<div id="map">
+		</div>
+		
+		
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/tutorial.css">
+		
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKw3oUhX4EqhXPmL9jJ9YY4GagTP9s_iU">
+		</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+        <script src="/static/js/tutorial.js"></script>
+    </body>
+</html>
